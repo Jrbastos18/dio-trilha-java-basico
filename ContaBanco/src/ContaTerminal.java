@@ -3,10 +3,12 @@ import java.util.Scanner;
 
 public class ContaTerminal {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        Locale.setDefault(Locale.US);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Por favor, digite o número da Conta!");
-        String numero = scanner.nextLine();
+        int numero = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("Por favor, digite o número da Agência!");
         String agencia = scanner.nextLine();
